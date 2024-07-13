@@ -1,0 +1,61 @@
+import 'package:flutter/material.dart';
+
+void main() => runApp(CircleMenuApp());
+
+class CircleMenuApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Navigation icons',
+      home: CircleMenuScreen(),
+    );
+  }
+}
+
+class CircleMenuScreen extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Navigation icons'),
+      ),
+      body: Center(
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: [
+            CircleAvatar(
+              radius: 30,
+              backgroundColor: Colors.blue,
+              child: IconButton(
+                icon: Icon(Icons.home, color: Colors.white),
+                onPressed: () {
+                  // Action when pressing the "Home" button
+                },
+              ),
+            ),
+            CircleAvatar(
+              radius: 30,
+              backgroundColor: Colors.green,
+              child: IconButton(
+                icon: Icon(Icons.search, color: Colors.white),
+                onPressed: () {
+                  // Action when clicking the "Search" button
+                },
+              ),
+            ),
+            CircleAvatar(
+              radius: 30,
+              backgroundColor: Colors.red,
+              child: IconButton(
+                icon: Icon(Icons.settings, color: Colors.white),
+                onPressed: () {
+                  // Action when clicking the "Settings" button
+                },
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
